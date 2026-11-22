@@ -186,11 +186,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "e060245c45cd022d",
   "lastOpenFiles": [
+    "README.md",
     "DSA/TwoPointers/TwoPointers.md",
     "DSA/Binary Search/BinarySearch.md",
     "DSA/Greedy/GreedyAlgorithms.md",
