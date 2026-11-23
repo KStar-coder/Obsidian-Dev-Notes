@@ -25,7 +25,7 @@ If we can do this without worsening the answer, our greedy algorithm must also b
 
 1) <https://www.codechef.com/problems/TADELIVE?tab=statement>
 
-### IBM OA
+### 2) IBM OA
 
 ```cpp
 /*Given an array of size N; and a target -> find the minimum number of operations needed to make all elements of array equal to target -> there are multiple targets in Q and each target is indivitual i.e once one target is completed, the array resets to it's original numbers before proceeding with the next number;
@@ -126,7 +126,7 @@ int main()
 ```
 
 3) <https://www.codechef.com/problems/SHOOT0>
-### Goldman Sachs OA
+### 3) Goldman Sachs OA
 
 ```cpp
 /*
@@ -233,7 +233,7 @@ int main()
 }
 ```
 
-### Atlassian OA
+### 4) Atlassian OA
 
 ```cpp
 /*
@@ -351,7 +351,7 @@ int main()
 }
 ```
 
-### Atlassian OA String value sum
+### 5) Atlassian OA String value sum
 
 ```cpp
 /*
@@ -453,7 +453,7 @@ int main()
 }
 ```
 
-### Salesforce OA
+### 6) Salesforce OA
 
 ```cpp
 /*
@@ -571,3 +571,291 @@ int main()
    return 0;
 }
 ```
+
+
+# Greedy Algorithm Important Article: 
+Here is a very important greedy algorithm article [link](https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/)
+
+
+### 6) Google OA 
+
+Given binary string = "011100001" we can flip 1 to 0 and 0 to 1 any number of times.
+
+Apply the above operation such that the string does not contain "10" as a substring.
+
+Return minimum number of such operations required.
+
+Solution description: 
+
+we require the string to be of the format: `"00000...111111"` So that no "10" is present
+
+Here, we are using the prefix suffix concept of  [[Hashing]]  
+
+- `pref[i]` = number of `1`s from index `0` to `i`. These must be flipped to `0`.
+    
+- `suff[i]` = number of `0`s from index `i` to `n-1`. These must be flipped to `1`.
+
+
+We initialise the ans as `min(pref[n-1], suff[0])`. 
+
+`pref[n-1]`: Number of 1s that should be converted to 0 till the n-1th index to get the entire string as "111111111".
+`suff[0]`: Number of 0s that should be converted to 1s till the 0th index starting from the end to get the entire string as "00000000".
+
+```cpp
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(string s)
+{
+
+	int n = s.size();
+	
+	vector<int> pref(n, 0), suff(n, 0);
+
+	if (s[0] == '1')
+	{
+	
+		pref[0] = 1;
+	
+	}
+  
+
+	for (int i = 1; i < n; i++)
+	{
+		pref[i] = pref[i - 1] + (s[i] == '1' ? 1 : 0);
+	}
+	
+	if (s[n - 1] == '0')
+	{
+	
+		suff[n - 1] = 1;
+	
+	}
+
+for (int i = n - 2; i >= 0; i--)
+
+	{
+	
+		suff[i] = suff[i + 1] + (s[i] == '0' ? 1 : 0);
+	
+	}
+
+	int ans = min(pref[n - 1], suff[0]);
+	
+	for (int i = 0; i + 1 < n; i++)
+	
+	{
+	
+		ans = min(ans, pref[i] + suff[i + 1]);
+	
+	}
+	
+	return ans;
+
+}
+
+int main()
+{
+	string s = "111000101000";
+	
+	cout << solve(s) << endl;
+	
+	return 0;
+
+}
+
+```
+
+
+### 7) Intuit OA 
+
+A salesperson must sell `n` items in a bag with random IDs. The salesperson can remove as many as `m` items from the bag. Determine the minimum number of different IDs the final bag can contain after performing, at most, `m` deletions.
+
+### **Example**
+
+```
+n = 6
+ids = [1, 1, 1, 2, 3, 2]
+m = 2
+```
+
+Two possible actions that give the minimum 2 different IDs:
+
+1. Remove 2 items with ID = 2, and the final bag will contain item `ids' = [1, 1, 1, 3]`.
+    
+2. Remove 1 item with ID = 2 and 1 item with ID = 3, and the final bag will contain item `ids' = [1, 1, 1, 2]`.
+    
+
+The minimum number of distinct IDs is **2**.
+
+``` CPP
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(vector<int> &arr, int m)
+{
+	int n = arr.size();
+	  
+	sort(arr.begin(), arr.end());
+	
+	int cnt = 1;
+	
+	vector<int> freq;
+	
+	for (int i = 0; i + 1 < n; i++)
+	{
+		if (arr[i] == arr[i + 1])
+		{
+			cnt++;
+		}
+		else
+		{
+			freq.push_back(cnt);
+			cnt = 1;
+		}	
+	}
+	sort(freq.begin(), freq.end());
+	
+	int i = 0;
+	
+	while (m - freq[i] > 0 && i < n)
+	{
+		m = m - freq[i];
+		i++;
+	}
+	
+	return freq.size() - i;
+}
+
+int main()
+{
+
+	vector<int> arr = {1, 1, 1, 2, 3, 2};
+	int m = 2;
+	cout << solve(arr, m) << endl;
+	return 0;
+}
+
+```
+
+
+### 8) Intuit OA Harry Potter 
+
+## **Harry Potter and the Goblet of Fire**
+
+A wizard tournament is being held at Hogwarts, and N wizards are auditioning for it. The Goblet of Fire will choose the wizards according to their primary and secondary spell skills. A wizard will advance to the tournament if there is no other wizard with strictly both higher primary and secondary skills at the same time than this one.
+
+Your task is to calculate the number of wizards that will advance in the tournament.
+
+**Input format:** The first line contains n-> number of wizards followed by 2 arrays of size n containing the skill of spell 1 and spell 2.
+
+## **Example #1**
+
+**Input**
+
+```
+2
+1 2
+2 3
+```
+
+**Output**
+
+```
+1
+```
+
+
+## **Example #2**
+
+**Input**
+
+```
+3
+1 2 3
+3 2 1
+```
+
+**Output**
+
+```
+3
+```
+
+**Explanation**: All 3 wizards will advance in the tournament since there isn't a single wizard who's primary and secondary skills are strictly greater than the other 
+
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(vector<int> a, vector<int> b)
+{
+    int n = a.size();
+
+    vector<pair<int, int>> p;
+
+    for (int i = 0; i < n; i++)
+    {
+        p.push_back({a[i], b[i]});
+    }
+
+    // sorting on the basis of a in descending order
+    sort(p.begin(), p.end(), greater<pair<int, int>>());
+
+    // now, a is sorted in descending order
+    // we need to traverse p
+
+    int ans = 0;
+    int i = 0;
+    int maxB = 0;
+    while (i < n)
+    {
+        int j = i;
+
+        // moving the j pointer till the first spells are not same
+        while (j < n && p[j].first == p[i].first)
+        {
+            j++;
+        }
+
+        // now, j points to a[j] where a[j] < a[i] since we sorted in decreasing order
+
+        // calculating the ans based on spell b from i to j-1
+        // here from i to j-1, spell a is equal so the only wizard to qualify should have spell b larger than
+        for (int k = i; k < j; k++)
+        {
+            if (maxB <= p[k].second)
+            {
+                ans++;
+            }
+        }
+
+        // updating the maxB from i to j-1
+
+        for (int k = i; k < j; k++)
+        {
+            if (maxB < p[k].second)
+            {
+                maxB = p[k].second;
+            }
+        }
+
+        // updating the ith pointer
+        i = j;
+    }
+    return ans;
+}
+int main()
+{
+    vector<int> a{1600, 4, 4, 4, 1, 2, 3, 0};
+    vector<int> b{0, 5, 0, 0, 3, 2, 5, 1600};
+    cout << solve(a, b) << endl;
+    return 0;
+}
+```
+
