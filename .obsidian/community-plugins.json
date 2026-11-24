@@ -1,5 +1,9 @@
 [
   "obsidian-git",
   "obsidian-format-code",
-  "vscode-editor"
+  "vscode-editor",
+  "calendar",
+  "obsidian-icon-folder",
+  "colored-tags",
+  "code-styler"
 ]

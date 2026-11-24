@@ -4,7 +4,7 @@ The central idea is:
 
 > If an optimal solution does not make the greedy choice, we can modify it to include the greedy choice without making the solution worse.
 
-In other words, we can exchange a decision made by an optimal solution with the greedy decision while preserving optimality.
+>In other words, we can exchange a decision made by an optimal solution with the greedy decision while preserving optimality.
 
 Let's understand this step by step.
 
@@ -858,4 +858,8 @@ int main()
     return 0;
 }
 ```
+
+
+### 9) 
+
 

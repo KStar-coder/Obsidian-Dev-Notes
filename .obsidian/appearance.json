@@ -1,4 +1,6 @@
 {
   "showRibbon": false,
-  "translucency": true
+  "translucency": true,
+  "cssTheme": "Obsidianite",
+  "theme": "obsidian"
 }

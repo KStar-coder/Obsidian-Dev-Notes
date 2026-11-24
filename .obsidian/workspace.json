@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7cf0bf3237abdd37",
+        "id": "2e7b64c2dc16b9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "e060245c45cd022d",
+            "id": "76d5ba08435d4d44",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,20 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "GreedyAlgorithms"
-            }
-          },
-          {
-            "id": "c78fa9f3cc6ee63a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DSA/Hashing/Hashing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Hashing"
             }
           }
         ]
@@ -47,6 +33,7 @@
       {
         "id": "2d48feb7a65126a8",
         "type": "tabs",
+        "dimension": 70.15418502202643,
         "children": [
           {
             "id": "d8c1a62c75a47e96",
@@ -94,6 +81,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "d81592487a3f7407",
+        "type": "tabs",
+        "dimension": 29.845814977973568,
+        "children": [
+          {
+            "id": "e060245c45cd022d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -106,6 +110,7 @@
       {
         "id": "e721ad976670fe7e",
         "type": "tabs",
+        "dimension": 59.641728134878825,
         "children": [
           {
             "id": "1376a7aafa410346",
@@ -175,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DSA/Binary Search/BinarySearch.md",
+                "file": "DSA/Greedy/GreedyAlgorithms.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -184,11 +189,29 @@
               "title": "Outline"
             }
           }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "408df74723e87735",
+        "type": "tabs",
+        "dimension": 40.35827186512118,
+        "children": [
+          {
+            "id": "92b1b57c9bbd95a8",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 257.75390625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,13 +226,13 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "e060245c45cd022d",
+  "active": "76d5ba08435d4d44",
   "lastOpenFiles": [
+    "DSA/Greedy/GreedyAlgorithms.md",
+    "DSA/Hashing/Hashing.md",
     "DSA/Trees/Trees.md",
     "DSA/TwoPointers/TwoPointers.md",
     "DSA/Trees",
-    "DSA/Greedy/GreedyAlgorithms.md",
-    "DSA/Hashing/Hashing.md",
     "DSA/Binary Search/BinarySearch.md",
     "README.md",
     "DSA/TwoPointers",
