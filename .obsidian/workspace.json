@@ -4,24 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2e7b64c2dc16b9c4",
+        "id": "50446861d6a4c070",
         "type": "tabs",
         "children": [
           {
-            "id": "76d5ba08435d4d44",
+            "id": "66c650113876ea68",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Greedy/GreedyAlgorithms.md",
+                "file": "DSA/DP/Dynamic Programming Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GreedyAlgorithms"
+              "title": "Dynamic Programming Notes"
+            }
+          },
+          {
+            "id": "e060245c45cd022d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -33,7 +44,7 @@
       {
         "id": "2d48feb7a65126a8",
         "type": "tabs",
-        "dimension": 70.15418502202643,
+        "dimension": 99.99999999999999,
         "children": [
           {
             "id": "d8c1a62c75a47e96",
@@ -81,23 +92,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "d81592487a3f7407",
-        "type": "tabs",
-        "dimension": 29.845814977973568,
-        "children": [
-          {
-            "id": "e060245c45cd022d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
@@ -118,7 +112,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DSA/Greedy/GreedyAlgorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +173,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DSA/Greedy/GreedyAlgorithms.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -226,18 +218,19 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "76d5ba08435d4d44",
+  "active": "d8c1a62c75a47e96",
   "lastOpenFiles": [
+    "DSA/DP/Dynamic Programming Notes.md",
     "DSA/Greedy/GreedyAlgorithms.md",
+    "LCS.md",
+    "DSA/Binary Search/BinarySearch.md",
     "DSA/Hashing/Hashing.md",
     "DSA/Trees/Trees.md",
     "DSA/TwoPointers/TwoPointers.md",
     "DSA/Trees",
-    "DSA/Binary Search/BinarySearch.md",
     "README.md",
     "DSA/TwoPointers",
     "DSA/untitled folder",
-    "DSA/DP/Dynamic Programming Notes.md",
     "DSA/Graph/Graph.md",
     "Welcome.md",
     "create a link.md",

@@ -6,6 +6,11 @@ We learn DP using arrays and loops first instead of jumping to recursion
 **Doubt: Q11, Q12,  Q13, Q15, Q19,**
 **Revisit: Q19, Q24**
 
+###  #LIS and #LCS 
+> Longest Increasing Subsequence (LIS): [Leetcode](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+> Longest Consecutive Sequence (LCS): [Leetcode](https://leetcode.com/problems/longest-consecutive-sequence/description/)
+ 
+
 ### 1) Select maximum sum subset from the two arrays such that no two elements are…
 
 Select maximum sum subset from the two arrays such that no two elements are consecutive
@@ -307,7 +312,7 @@ int main()
 }
 ```
 
-### 6) Atlassian OA
+### 6) #Atlassian OA
 
 Understanding of the problem:-\> You are given “B” queries;
 you have to perform some of them in order ; and make your initial integer 1 as large as possible!
@@ -378,7 +383,7 @@ int main()
 }
 ```
 
-### 7) Google OA 3 cities
+### 7) #Google OA 3 cities
 
 ```cpp
 /*
@@ -424,7 +429,7 @@ int main()
 }
 ```
 
-### 8) Amazon MAX Goodness
+### 8) #Amazon MAX Goodness
 
 ```cpp
 /*
@@ -612,7 +617,7 @@ int main()
 
 Here, we will use a 1 based indexing, Rest of the code is self explanatory
 
-### 12) Microsoft OA
+### 12) #Microsoft OA
 
 Dp[i][j] =  maximum number of moves we can make from the index i and j
 
@@ -761,7 +766,7 @@ int main()
 }
 ```
 
-### 13) Google K partition m sum
+### 13) #Google K partition m sum
 
 [Google K partition m sum](https://docs.google.com/document/d/1-6Wz38cZtW5R616MT2c9qy80R7YfOaiGu3kGtBl7zYM/edit)
 
@@ -961,7 +966,7 @@ int main()
 }
 ```
 
-### 17) Google OA Server
+### 17) #Google OA Server
 
 -> My code
 
@@ -1163,7 +1168,7 @@ int main()
 }
 ```
 
-### 19) Meesho OA
+### 19) #Meesho OA
 
 Understanding -> Given an array of size “N” ; you can do a particular type of operation any
 number of times(even 0) ; the final size of the array should be as small as possible!
@@ -1397,7 +1402,7 @@ int main()
 }
 ```
 
-### 21) Uber OA
+### 21) #Uber OA
 
 ```cpp
 /*
@@ -1552,7 +1557,7 @@ int main()
 }
 ```
 
-### 23) DE Shaw DP OA
+### 23) #DEShaw DP OA
 
 ```cpp
 /*
@@ -1662,7 +1667,7 @@ int main()
 }
 ```
 
-### 25) Google DE Shaw
+### 25) #Google #DEShaw
 
 ```cpp
 /*
@@ -1942,7 +1947,7 @@ int main()
 }
 ```
 
-### 29) Microsoft OA
+### 29) #Microsoft OA
 
 Understanding :-\> We are given an array of size “N”;
 we can select some numbers from this array and we can rearrange them in any order we want ;
@@ -1998,7 +2003,7 @@ int main()
 }
 ```
 
-### 30) Airbnb OA
+### 30) #Airbnb OA
 
 */\**
 *There are 'n' stones in a row from 0 to n-1. For every ith stone ,*
@@ -2073,7 +2078,7 @@ int main()
 }
 ```
 
-### 31) Cisco OA Rook Chess
+### 31) #Cisco OA Rook Chess
 
 Simple counting technique and maintaining a prefix sum array
 
@@ -2241,7 +2246,7 @@ int main()
 
 [My Solution](https://leetcode.com/problems/domino-and-tromino-tiling/submissions/1184541438/)
 
-### 34) Tower Research Tiling DP
+### 34) #TowerResearch Tiling DP
 
 ```cpp
 /*
@@ -2276,7 +2281,7 @@ int main()
 }
 ```
 
-### 35) Servicenow OA
+### 35) #Servicenow OA
 
 ```cpp
 /*
@@ -2334,7 +2339,7 @@ int main()
 ```
 
 36) Session 55 Codenation OA -> Bit Manipulaiton
-### 37) Google Hard OA
+### 37) #Google Hard OA
 
 ```cpp
 /*
@@ -2394,7 +2399,7 @@ int main()
 
 New Skate Board : <https://www.youtube.com/watch?v=cB6GkXuHo8k>
 
-### 38) Uber OA
+### 38) #Uber OA
 
 ```cpp
 /*
@@ -2448,7 +2453,7 @@ int main()
 }
 ```
 
-### 39) Meesho OA
+### 39) #Meesho OA
 
 ```cpp
 /*
@@ -2656,7 +2661,7 @@ int main()
 ```
 
 42) <https://leetcode.com/problems/paint-house-iv/description/>
-### 43) Uber OA
+### 43) #Uber OA
 
 ```cpp
 /*
@@ -2977,7 +2982,7 @@ int main()
 }
 ```
 
-### 47) Linkedin OA Partition DP
+### 47) #Linkedin OA Partition DP
 
 ```cpp
 /*
@@ -3033,4 +3038,96 @@ int main()
 }
 ```
 
-48) Leetcode biweekly Contest
+### 48) #Google OA 2 Array subsequence 
+
+Given 2 arrays A and B, Your task is to determine how many elements of A needs to be inserted into B so that every element of A appears in B in the same order. You can insert new elements at any position in B. However, you cannot change the relative order of the elements that are already present in B. 
+`Array A contains n Distinct integers and array B contains M integers which are not distinct.` 
+
+`Example:`
+`In the first sample, array A is [1, 2, 3, 4, 5] and array B is [2, 5, 6, 4, 9, 12].`
+`We need to insert at least 3 elements into B to make A a subsequence.`
+`One possible way is to insert 1 at the beginning of B and insert 3 and 4 between 2 and 5.`
+`The resulting array B becomes:`
+`[1, 2, 3, 4, 5, 6, 4, 9, 12]`
+`Now, array A = [1, 2, 3, 4, 5] is a subsequence of B.`
+`Therefore, the minimum number of elements to be inserted is 3.``
+`
+
+
+`Solution Description:`
+
+Solution 1: This is the O(N\*M) solution. Here, we find the #LCS of array A in array B. this will give us the value of the number of similar elements in similar order . We need to find the minimum numbers to be inserted. It will be a.size() - LIS(B)
+
+Solution 2: This is the optimal O(M* logM) solution. Here, we convert every element in A into 1,2,3 and so on. Eg: 
+a=> {8,12,7,6,5} 
+we create a hashmap where 
+{8->1}
+{12->2}
+{7->3}
+{6->4}
+{5->5}
+
+Now, we convert array a to {1,2,3,4,5}. Similarly, when we encounter these elements in array b, we convert them to these numbers. 
+Now, the problem becomes find the Longest Increasing subsequence (LIS) in B.. and then subtract it with the size of A to get the number of elements to be inserted!!!!
+#LIS can be found optimally using binary search:
+
+Optimal Approach Code: 
+
+```CPP
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(vector<int> &a, vector<int> &b)
+{
+    int n = a.size();
+    int m = b.size();
+    unordered_map<int, int> mp;
+    int cnt = 1;
+    for (int i = 0; i < n; i++)
+    {
+        mp[a[i]] = cnt;
+        cnt++;
+    }
+    vector<int> bb;
+    for (int i = 0; i < m; i++)
+    {
+        if (mp.find(b[i]) != mp.end())
+        {
+            bb.push_back(mp[b[i]]);
+        }
+    }
+
+    // now we find the LIS of B using binary search method of Striver
+    vector<int> temp;
+    temp.push_back(bb[0]);
+    for (int i = 1; i < bb.size(); i++)
+    {
+        if (bb[i] > temp.back())
+        {
+            temp.push_back(bb[i]);
+        }
+        else
+        {
+            int index = lower_bound(temp.begin(), temp.end(), bb[i]) - temp.begin();
+            temp[index] = bb[i];
+        }
+    }
+    return a.size() - temp.size();
+}
+
+int main()
+{
+    vector<int> a = {1, 2, 3, 4, 5};
+    vector<int> b = {2, 5, 6, 4, 9, 12};
+
+    cout << solve(a, b) << endl;
+    return 0;
+}
+```
+
+
+
+### 49) 
+
+

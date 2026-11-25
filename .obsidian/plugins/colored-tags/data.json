@@ -9,7 +9,26 @@
   "accessibility": {
     "highTextContrast": false
   },
-  "knownTags": {},
+  "knownTags": {
+    "airbnb": 14,
+    "amazon": 9,
+    "atlassian": 6,
+    "cisco": 15,
+    "deshaw": 13,
+    "goldmansachs": 7,
+    "google": 4,
+    "ibm": 8,
+    "intuit": 3,
+    "lcs": 2,
+    "linkedin": 18,
+    "lis": 1,
+    "meesho": 11,
+    "microsoft": 10,
+    "salesforce": 5,
+    "servicenow": 17,
+    "towerresearch": 16,
+    "uber": 12
+  },
   "tagColors": {},
   "_version": 4
 }

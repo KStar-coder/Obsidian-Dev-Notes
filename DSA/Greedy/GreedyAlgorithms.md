@@ -25,7 +25,7 @@ If we can do this without worsening the answer, our greedy algorithm must also b
 
 1) <https://www.codechef.com/problems/TADELIVE?tab=statement>
 
-### 2) IBM OA
+### 2) #IBM OA
 
 ```cpp
 /*Given an array of size N; and a target -> find the minimum number of operations needed to make all elements of array equal to target -> there are multiple targets in Q and each target is indivitual i.e once one target is completed, the array resets to it's original numbers before proceeding with the next number;
@@ -126,7 +126,7 @@ int main()
 ```
 
 3) <https://www.codechef.com/problems/SHOOT0>
-### 3) Goldman Sachs OA
+### 3) #GoldmanSachs OA
 
 ```cpp
 /*
@@ -233,7 +233,7 @@ int main()
 }
 ```
 
-### 4) Atlassian OA
+### 4) #Atlassian OA
 
 ```cpp
 /*
@@ -351,7 +351,7 @@ int main()
 }
 ```
 
-### 5) Atlassian OA String value sum
+### 5) #Atlassian OA String value sum
 
 ```cpp
 /*
@@ -453,7 +453,7 @@ int main()
 }
 ```
 
-### 6) Salesforce OA
+### 6) #Salesforce OA
 
 ```cpp
 /*
@@ -577,7 +577,7 @@ int main()
 Here is a very important greedy algorithm article [link](https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/)
 
 
-### 6) Google OA 
+### 6) #Google OA 
 
 Given binary string = "011100001" we can flip 1 to 0 and 0 to 1 any number of times.
 
@@ -593,10 +593,10 @@ Here, we are using the prefix suffix concept of  [[Hashing]]
 
 - `pref[i]` = number of `1`s from index `0` to `i`. These must be flipped to `0`.
     
-- `suff[i]` = number of `0`s from index `i` to `n-1`. These must be flipped to `1`.
+- `suff[i]` = number of `0`s from index `n-1` to `0`. These must be flipped to `1`.
 
 
-We initialise the ans as `min(pref[n-1], suff[0])`. 
+We initialise the ans as `min(pref[n-1], suff[0])`.  It is the minimum cost to convert the entire string to 0 or 1.
 
 `pref[n-1]`: Number of 1s that should be converted to 0 till the n-1th index to get the entire string as "111111111".
 `suff[0]`: Number of 0s that should be converted to 1s till the 0th index starting from the end to get the entire string as "00000000".
@@ -669,7 +669,7 @@ int main()
 ```
 
 
-### 7) Intuit OA 
+### 7) #Intuit OA 
 
 A salesperson must sell `n` items in a bag with random IDs. The salesperson can remove as many as `m` items from the bag. Determine the minimum number of different IDs the final bag can contain after performing, at most, `m` deletions.
 
@@ -742,7 +742,7 @@ int main()
 ```
 
 
-### 8) Intuit OA Harry Potter 
+### 8)  #Intuit OA Harry Potter 
 
 ## **Harry Potter and the Goblet of Fire**
 
@@ -860,6 +860,93 @@ int main()
 ```
 
 
-### 9) 
+### 9) Leetcode Mice 
+
+There are two mice and `n` different types of cheese, each type of cheese should be eaten by exactly one mouse.
+
+A point of the cheese with index `i` (**0-indexed**) is:
+
+- `reward1[i]` if the first mouse eats it.
+- `reward2[i]` if the second mouse eats it.
+
+You are given a positive integer array `reward1`, a positive integer array `reward2`, and a non-negative integer `k`.
+
+Return _**the maximum** points the mice can achieve if the first mouse eats exactly_ `k` _types of cheese._
+
+**Example 1:**
+
+**Input:** reward1 = [1,1,3,4], reward2 = [4,4,1,1], k = 2
+**Output:** 15
+**Explanation:** In this example, the first mouse eats the 2nd (0-indexed) and the 3rd types of cheese, and the second mouse eats the 0th and the 1st types of cheese.
+The total points are 4 + 4 + 3 + 4 = 15.
+It can be proven that 15 is the maximum total points that the mice can achieve.
+
+**Example 2:**
+
+**Input:** reward1 = [1,1], reward2 = [1,1], k = 2
+**Output:** 2
+**Explanation:** In this example, the first mouse eats the 0th (0-indexed) and 1st types of cheese, and the second mouse does not eat any cheese.
+The total points are 1 + 1 = 2.
+It can be proven that 2 is the maximum total points that the mice can achieve.
 
 
+
+**Solution Description:** Here, we will create a vector<pair<int,int>>diff to store the difference between reward1 and reward2 along with their index i;
+We then sort it in descending order which will give us the largest reward1-reward2 value at the first index. Since the pair also contains the index, we will get the first k indices of largest reward1 value!!!!!
+now, from 0 to k-1, we iterate diff to calculate the reward1 values and from k to n-1 to calculate the reward2 values
+
+```CPP
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int solve(vector<int> &a, vector<int> &b)
+{
+    int n = a.size();
+    int m = b.size();
+    unordered_map<int, int> mp;
+    int cnt = 1;
+    for (int i = 0; i < n; i++)
+    {
+        mp[a[i]] = cnt;
+        cnt++;
+    }
+    vector<int> bb;
+    for (int i = 0; i < m; i++)
+    {
+        if (mp.find(b[i]) != mp.end())
+        {
+            bb.push_back(mp[b[i]]);
+        }
+    }
+
+    // now we find the LIS of B using binary search method of Striver
+    vector<int> temp;
+    temp.push_back(bb[0]);
+    for (int i = 1; i < bb.size(); i++)
+    {
+        if (bb[i] > temp.back())
+        {
+            temp.push_back(bb[i]);
+        }
+        else
+        {
+            int index = lower_bound(temp.begin(), temp.end(), bb[i]) - temp.begin();
+            temp[index] = bb[i];
+        }
+    }
+    return a.size() - temp.size();
+}
+
+int main()
+{
+    vector<int> a = {1, 2, 3, 4, 5};
+    vector<int> b = {2, 5, 6, 4, 9, 12};
+
+    cout << solve(a, b) << endl;
+    return 0;
+}
+```
+
+
+### 10) 
