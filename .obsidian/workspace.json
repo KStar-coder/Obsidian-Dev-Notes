@@ -13,26 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/DP/Dynamic Programming Notes.md",
+                "file": "Dev/Java Spring/Spring Security 03.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic Programming Notes"
-            }
-          },
-          {
-            "id": "e060245c45cd022d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Spring Security 03"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -44,7 +33,7 @@
       {
         "id": "2d48feb7a65126a8",
         "type": "tabs",
-        "dimension": 99.99999999999999,
+        "dimension": 74.00881057268722,
         "children": [
           {
             "id": "d8c1a62c75a47e96",
@@ -92,6 +81,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "76f62bdcab9f979b",
+        "type": "tabs",
+        "dimension": 25.991189427312776,
+        "children": [
+          {
+            "id": "e060245c45cd022d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -112,6 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Dev/Java Spring/Spring Security 03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,6 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Dev/Java Spring/Spring Security 03.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -218,11 +226,20 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "d8c1a62c75a47e96",
+  "active": "66c650113876ea68",
   "lastOpenFiles": [
+    "Dev/Java Spring/Spring Security 01.md",
+    "Dev/Java Spring/Spring Security 02.md",
+    "Dev/Java Spring/Spring Security 03.md",
+    "file:/Users/kaustav/Downloads/Spring Security Authenticating Users.md",
+    "Dev/Java Spring/Spring Security Login fiters and sessions.md",
+    "Spring Security - Multiple Users.md",
+    "Dev/Java Spring",
+    "Dev/untitled folder",
+    "LCS.md",
+    "Dev",
     "DSA/DP/Dynamic Programming Notes.md",
     "DSA/Greedy/GreedyAlgorithms.md",
-    "LCS.md",
     "DSA/Binary Search/BinarySearch.md",
     "DSA/Hashing/Hashing.md",
     "DSA/Trees/Trees.md",
@@ -237,8 +254,6 @@
     "DSA/Greedy",
     "DSA/Binary Search",
     "DSA/Graph",
-    "DSA/DP",
-    "DSA/Hashing",
-    "DSA"
+    "DSA/DP"
   ]
 }
